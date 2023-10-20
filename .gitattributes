@@ -1,0 +1,7 @@
+# kubectl-plugin/kubectl-crd_extractor project gitattributes file
+#  https://github.com/github/linguist/blob/master/docs/overrides.md
+
+* -text
+
+docs/*      linguist-documentation
+*.pb.go     linguist-generated
