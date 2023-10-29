@@ -3,6 +3,7 @@ module github.com/kubectl-plugin/kubectl-crd_extractor
 go 1.21.3
 
 require (
+	github.com/goccy/go-json v0.10.2
 	github.com/spf13/cobra v1.7.0
 	github.com/spf13/pflag v1.0.5
 	k8s.io/apiextensions-apiserver v0.28.3
