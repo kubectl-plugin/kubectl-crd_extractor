@@ -93,6 +93,10 @@ func (o *CRDExtractorOptions) Run(ctx context.Context) error {
 	if err := json.Indent(&buf, data, "", "  "); err != nil {
 		return fmt.Errorf("indent json: %w", err)
 	}
+	// write end of newline
+	if err := buf.WriteByte('\n'); err != nil {
+		return fmt.Errorf("write byte: %w", err)
+	}
 
 	dir := filepath.Join(strings.ToLower(gvk.Group), strings.ToLower(gvk.Version))
 	if o.output != "" {
